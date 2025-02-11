@@ -38,7 +38,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://blogweb-six.vercel.app/api/auth/register",
         formDataToSend,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
