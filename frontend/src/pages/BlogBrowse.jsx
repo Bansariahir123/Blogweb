@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import BlogCard from "../components/BlogCard";
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const BlogBrowse = () => {
   const [blogs, setBlogs] = useState([]);
   const [categories, setCategories] = useState([]);  // To hold the categories
@@ -16,7 +16,7 @@ const BlogBrowse = () => {
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("https://blogweb-six.vercel.app/api/blogs", {
+        const res = await axios.get("${BASE_URL}/api/blogs", {
           params: {
             search,
             category,
