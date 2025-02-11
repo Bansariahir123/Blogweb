@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import BlogCard from "../components/BlogCard";
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("https://blogweb-six.vercel.app/api/blogs")
+    axios.get("${BASE_URL}/api/blogs")
       .then(res => setBlogs(res.data))
       .catch(err => console.error(err));
   }, []);
