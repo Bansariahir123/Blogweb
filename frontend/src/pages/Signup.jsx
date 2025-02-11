@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../redux/authSlice";
 import axios from "axios";
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const Signup = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -38,7 +38,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://blogweb-six.vercel.app/api/auth/register",
+        "${BASE_URL}/api/auth/register",
         formDataToSend,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
