@@ -8,7 +8,7 @@ const Home = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/blogs")
+    axios.get("https://blogweb-six.vercel.app/api/blogs")
       .then(res => setBlogs(res.data))
       .catch(err => console.error(err));
   }, []);
