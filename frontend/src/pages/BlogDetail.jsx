@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import CommentSection from "../components/CommentSection";
 import { useSelector } from "react-redux"; 
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const BlogDetail = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
@@ -12,7 +12,7 @@ const BlogDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://blogweb-six.vercel.app/api/blogs/${id}`)
+    axios.get(`${BASE_URL}/api/blogs/${id}`)
       .then(res => {
         setBlog(res.data);
         if (user && res.data.author && res.data.author._id === user.id) {
