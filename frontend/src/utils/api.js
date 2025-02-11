@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const API = axios.create({ baseURL: "https://blogweb-six.vercel.app/api" });
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API = axios.create({ baseURL: "${BASE_URL}/api" });
 
 // Blogs API calls
 export const fetchBlogs = () => API.get("/blogs");
