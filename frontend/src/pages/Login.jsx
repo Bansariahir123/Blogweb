@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { login } from "../redux/authSlice";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
@@ -19,7 +19,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("https://blogweb-six.vercel.app/api/auth/login", formData);
+      const response = await axios.post("${BASE_URL}/api/auth/login", formData);
       const { token, userId, name, profileImage } = response.data;
       const profileImageUrl = profileImage.replace(/\\/g, "/"); // Convert \ to /
       const userData = { id: userId, name, email: formData.email, profileImage: `http://localhost:5000/${profileImageUrl}`, }; // Store profileImage
