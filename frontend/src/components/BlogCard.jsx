@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const BlogCard = ({ blog }) => {
   console.log("Blog Image URL:", blog.image);
   return (
     <div className="p-4 rounded shadow-md ">
       {/* Blog Image */}
       {blog.image && (
-        <img src={`https://blogweb-six.vercel.app/${blog.image}`} alt={blog.title} className=" object-cover rounded " />
+        <img src={`${BASE_URL}${blog.image}`} alt={blog.title} className=" object-cover rounded " />
       )}
       
 
