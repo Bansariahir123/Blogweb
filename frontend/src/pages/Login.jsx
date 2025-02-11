@@ -19,7 +19,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", formData);
+      const response = await axios.post("https://blogweb-six.vercel.app/api/auth/login", formData);
       const { token, userId, name, profileImage } = response.data;
       const profileImageUrl = profileImage.replace(/\\/g, "/"); // Convert \ to /
       const userData = { id: userId, name, email: formData.email, profileImage: `http://localhost:5000/${profileImageUrl}`, }; // Store profileImage
