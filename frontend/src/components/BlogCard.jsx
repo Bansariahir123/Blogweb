@@ -6,7 +6,7 @@ const BlogCard = ({ blog }) => {
     <div className="p-4 rounded shadow-md ">
       {/* Blog Image */}
       {blog.image && (
-        <img src={`http://localhost:5000${blog.image}`} alt={blog.title} className=" object-cover rounded " />
+        <img src={`https://blogweb-six.vercel.app/${blog.image}`} alt={blog.title} className=" object-cover rounded " />
       )}
       
 
