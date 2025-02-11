@@ -1,0 +1,151 @@
+/* About.css */
+.about-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fafafa;
+  }
+  
+  .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .contact-btn {
+    background-color: #7c4ee4;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .nav-item.active {
+    color: #7c4ee4;
+  }
+  
+  .intro-section {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+    color: #666;
+    letter-spacing: 1.6px;
+  }
+  
+  .main-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+    width: 60%;
+    margin: 20px auto;
+  }
+  
+  .how-we-work-section {
+    margin-top: 100px;
+  }
+  
+  .work-process {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .process-item {
+    width: 30%;
+    background-color: rgba(203, 233, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  .process-title {
+    font-size: 72px;
+    font-weight: bold;
+    color: #7c4ee4;
+  }
+  
+  .process-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .process-description {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .learn-more-btn {
+    background-color: #7c4ee4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .footer {
+    background-color: #7c4ee4;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer-title {
+    font-size: 52px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .footer-description {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .contact-footer-btn {
+    background-color: white;
+    color: #7c4ee4;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .work-process {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .process-item {
+      width: 80%;
+      margin-bottom: 30px;
+    }
+  }
+  

@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+
+.footer-container {
+  width: 100%;
+  background-color: #7c4ee4;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-subscribe {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-heading {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.subscribe-input {
+  width: 180px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: white;
+  font-size: 12px;
+  color: #5a7184;
+}
+
+.subscribe-btn {
+  background-color: white;
+  color: #7c4ee4;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe-note {
+  font-size: 10px;
+  color: #bbbbbb;
+  margin-top: 5px;
+}
+
+.footer-bottom {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.logo-img {
+    width: 24px;
+    height: 24px;
+  }
+
+.logo-text {
+  font-size: 14px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.footer-link {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color:#7c4ee4;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social-icon {
+  background-color: #7c4ee4;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-size: 10px;
+  text-decoration: none;
+}
+.social-icon:hover{
+  background-color: #f78484;
+  color: black;
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.footer-divider {
+  width: 90%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px auto;
+}
+
+.footer-copyright {
+  font-size: 10px;
+  color: #555;
+}
