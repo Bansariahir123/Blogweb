@@ -67,10 +67,10 @@ const CreateEditBlog = () => {
       };
 
       if (isEdit) {
-        await axios.put(`http://localhost:5000/api/blogs/${id}`, formData, { headers });
+        await axios.put(`https://blogweb-six.vercel.app/api/blogs/${id}`, formData, { headers });
         toast.success("Blog updated successfully!");
       } else {
-        await axios.post("http://localhost:5000/api/blogs", formData, { headers });
+        await axios.post("https://blogweb-six.vercel.app/api/blogs", formData, { headers });
         toast.success("Blog created successfully!");
       }
       navigate("/blog-browse");
