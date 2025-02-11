@@ -12,7 +12,7 @@ const BlogDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/blogs/${id}`)
+    axios.get(`https://blogweb-six.vercel.app/api/blogs/${id}`)
       .then(res => {
         setBlog(res.data);
         if (user && res.data.author && res.data.author._id === user.id) {
@@ -27,7 +27,7 @@ const BlogDetail = () => {
       try {
         const token = localStorage.getItem("token");
         const headers = { Authorization: `Bearer ${token}` };
-        await axios.delete(`http://localhost:5000/api/blogs/${id}`, { headers });
+        await axios.delete(`https://blogweb-six.vercel.app/api/blogs/${id}`, { headers });
         navigate("/blog-browse");
         toast.success("Blog deleted successfully!");
       } catch (error) {
