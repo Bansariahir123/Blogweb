@@ -7,7 +7,7 @@ import JoditEditor from "jodit-react";
 import { toast } from "react-toastify";
 import axios from "axios"; // Import axios to make API requests
 import parse from 'html-react-parser';
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const CreateEditBlog = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -67,10 +67,10 @@ const CreateEditBlog = () => {
       };
 
       if (isEdit) {
-        await axios.put(`https://blogweb-six.vercel.app/api/blogs/${id}`, formData, { headers });
+        await axios.put(`${BASE_URL}/api/blogs/${id}`, formData, { headers });
         toast.success("Blog updated successfully!");
       } else {
-        await axios.post("https://blogweb-six.vercel.app/api/blogs", formData, { headers });
+        await axios.post("${BASE_URL}/api/blogs", formData, { headers });
         toast.success("Blog created successfully!");
       }
       navigate("/blog-browse");
