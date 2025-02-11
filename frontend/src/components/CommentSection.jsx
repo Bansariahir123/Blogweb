@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const CommentSection = ({ blogId }) => {
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
 
   useEffect(() => {
-    axios.get(`https://blogweb-six.vercel.app/api/comments/${blogId}`)
+    axios.get(`${BASE_URL}/api/comments/${blogId}`)
       .then(res => setComments(res.data))
       .catch(err => console.error(err));
   }, [blogId]);
 
   const submitComment = () => {
-    axios.post(`https://blogweb-six.vercel.app/api/comments`, { blogId, content: comment })
+    axios.post(`${BASE_URL}/api/comments`, { blogId, content: comment })
       .then(res => setComments([...comments, res.data]))
       .catch(err => console.error(err));
     setComment("");
