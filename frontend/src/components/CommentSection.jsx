@@ -6,13 +6,13 @@ const CommentSection = ({ blogId }) => {
   const [comment, setComment] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/comments/${blogId}`)
+    axios.get(`https://blogweb-six.vercel.app/api/comments/${blogId}`)
       .then(res => setComments(res.data))
       .catch(err => console.error(err));
   }, [blogId]);
 
   const submitComment = () => {
-    axios.post(`http://localhost:5000/api/comments`, { blogId, content: comment })
+    axios.post(`https://blogweb-six.vercel.app/api/comments`, { blogId, content: comment })
       .then(res => setComments([...comments, res.data]))
       .catch(err => console.error(err));
     setComment("");
